@@ -1,0 +1,45 @@
+page {
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gap-12{
+  gap: 12px;
+}
+
+.formbar {
+  background-color: rgb(255, 255, 255);
+  padding-left: var(--size-sm);
+  border-radius: var(--size-lg);
+  overflow: hidden;
+  .iconfont {
+    color: var(--nutui-color-primary);
+  }
+
+  .nut-input {
+    background-color: transparent !important;
+    padding-left: var(--size);
+  }
+}

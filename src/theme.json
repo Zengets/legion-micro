@@ -1,0 +1,49 @@
+{
+  "light": {
+    "navBgColor": "#f6f6f6",
+    "navTxtStyle": "black",
+    "bgColor": "#ffffff",
+    "bgTxtStyle": "light",
+    "bgColorTop": "#eeeeee",
+    "bgColorBottom": "#efefef",
+    "tabFontColor": "#000000",
+    "tabSelectedColor": "#fc893c",
+    "tabBgColor": "#ffffff",
+    "tabBorderStyle": "black",
+
+    "titleColor": "#333333",
+    "subtitleColor": "#666666",
+    "bodyColor": "#444444",
+    "captionColor": "#999999",
+    "cardBgColor": "#FFFFFF",
+
+
+    "nutuiColorPrimary": "#fc893c",
+    "nutuiColorPrimaryStop1": "#fc893c",
+    "nutuiColorPrimaryStop2": "#fc893c"
+  },
+  "dark": {
+    "navBgColor": "#191919",
+    "navTxtStyle": "white",
+    "bgColor": "#1f1f1f",
+    "bgTxtStyle": "dark",
+    "bgColorTop": "#191919",
+    "bgColorBottom": "#1f1f1f",
+    "tabFontColor": "#ffffff",
+    "tabSelectedColor": "#a1f6fb",
+    "tabBgColor": "#191919",
+    "tabBorderStyle": "white",
+
+
+    "titleColor": "#FFFFFF",
+    "subtitleColor": "#DDDDDD",
+    "bodyColor": "#CCCCCC",
+    "captionColor": "#AAAAAA",
+    "cardBgColor": "#2A2A2A",
+
+
+    "nutuiColorPrimary": "#a1f6fb",
+    "nutuiColorPrimaryStop1": "#a1f6fb",
+    "nutuiColorPrimaryStop2": "#a1f6fb"
+  }
+}

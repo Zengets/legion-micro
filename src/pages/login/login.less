@@ -1,0 +1,36 @@
+// src/pages/login/login.scss
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
+}
+
+.form-container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:var(--size-sm);
+  margin:var(--size-lg) 0;
+}
+
+.title{
+  font-size: var(--font-size-lg);
+  // tabBorderStyle
+  // color: var(--tab-bg-color);
+}
+.fixbottom{
+  position: fixed;
+  border-radius: var(--size-lg);
+  bottom: var(--size-lg);
+  font-size: var(--font-size-sm);
+  background-color: var(--nutui-color-primary);
+  color: aliceblue;
+  &::after{
+    border-radius: var(--size-lg);
+    overflow: hidden;
+    border: none !important;
+  }
+}
