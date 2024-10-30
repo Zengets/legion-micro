@@ -55,7 +55,7 @@ const CProvider = ({ children, full = false }) => {
         background:
           themeProvider.theme === "dark"
             ? "linear-gradient(135deg,#414345,#232526)"
-            : "linear-gradient(135deg,#ece9e6,#ffffff)",
+            : "linear-gradient(135deg,#f5f5f5,#ffffff)",
         paddingTop: statusBarHeight,
         overflow: "hidden",
       }}

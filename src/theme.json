@@ -7,7 +7,7 @@
     "bgColorTop": "#eeeeee",
     "bgColorBottom": "#efefef",
     "tabFontColor": "#000000",
-    "tabSelectedColor": "#fc893c",
+    "tabSelectedColor": "#13c2c2",
     "tabBgColor": "#ffffff",
     "tabBorderStyle": "black",
 
@@ -17,10 +17,10 @@
     "captionColor": "#999999",
     "cardBgColor": "#FFFFFF",
 
-
-    "nutuiColorPrimary": "#fc893c",
-    "nutuiColorPrimaryStop1": "#fc893c",
-    "nutuiColorPrimaryStop2": "#fc893c"
+    "nutuiGridBorderColor":"trasparent",
+    "nutuiColorPrimary": "#13c2c2",
+    "nutuiColorPrimaryStop1": "#13c2c2",
+    "nutuiColorPrimaryStop2": "#13c2c2"
   },
   "dark": {
     "navBgColor": "#191919",

@@ -4,7 +4,7 @@ export default defineAppConfig({
   themeLocation: "theme.json",
   pages: [
     "pages/home/home",
-    "pages/login/login",
+    // "pages/login/login",
     "pages/proteam/proteam",
     "pages/users/users",
     "pages/mine/mine",
