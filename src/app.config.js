@@ -8,6 +8,7 @@ export default defineAppConfig({
     "pages/proteam/proteam",
     "pages/users/users",
     "pages/mine/mine",
+    "pages/map/map",
   ],
   // tabBar: {
   //   custom: true,

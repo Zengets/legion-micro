@@ -3,7 +3,7 @@ import { View, Text } from '@tarojs/components';
 import CProvider from '@/components/CProvider';
 import { ArrowLeft, Image, Edit, Location } from '@nutui/icons-react-taro'
 import { Button, Grid, Avatar, ActionSheet } from '@nutui/nutui-react-taro'
-import { navigateBack, switchTab, onThemeChange, getSystemInfo } from '@tarojs/taro';
+import { navigateBack, navigateTo, onThemeChange, getSystemInfo } from '@tarojs/taro';
 import { IconFont } from '@nutui/icons-react-taro';
 import './proteam.less';
 
@@ -53,7 +53,11 @@ export default function AirConditionerControl() {
 
         <View className="environment-info">
           <Text className="env-title">位置信息</Text>
-          <View className="center gap-12" style={{padding:"0 12px"}}>
+          <View className="center gap-12" style={{padding:"0 12px"}} onClick={()=>{
+            navigateTo({
+              url: '/pages/map/map'
+            })
+          }}>
             <Location />
             <Text className="env-temperature" > 南京市江宁区天印大道 102 号 103 室</Text>
           </View>

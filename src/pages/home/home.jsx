@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { navigateTo, switchTab, onThemeChange, getSystemInfo } from '@tarojs/taro';
+import { navigateTo, switchTab, onThemeChange, scanCode } from '@tarojs/taro';
 import CProvider from '@/components/CProvider';
 import { View, Text, Image } from '@tarojs/components';
 import { IconFont } from '@nutui/icons-react-taro';
 import { Scan, Plus, Link, Unlink } from '@nutui/icons-react-taro'
-import { Button,ActionSheet, Avatar } from '@nutui/nutui-react-taro'
+import { Button, ActionSheet, Avatar } from '@nutui/nutui-react-taro'
 import './home.less';
 import { useRequest } from 'ahooks';
 import doFetch from '@/utils/doFetch';
@@ -76,6 +76,19 @@ export default function Home() {
     console.log('====================================');
     console.log(item.name)
     console.log('====================================');
+    switch (item.name) {
+      case '扫码绑定':
+      // 允许从相机和相册扫码
+        scanCode({
+          success: (res) => {
+            console.log(res)
+          }
+        })
+        break;
+
+      default:
+        break;
+    }
     setIsVisible(false)
   }
 
@@ -100,14 +113,16 @@ export default function Home() {
           </View>
         </View>
 
-        <View className="spread" style={{ padding: "0 8px 0 12px" }}>
-          <Text style={{color:"#999",fontSize:"14px"}}>
+        <View className="spread" style={{ padding: "4px 8px 12px 12px" }}>
+          <Text style={{ color: "#999", fontSize: "14px" }}>
             设备总数: {data?.length}
           </Text>
           <Button
             type='success'
-            //icon={<Scan width={16} height={16} />}
+            shape="square"
+            icon={<Plus width={16} height={16} />}
             onClick={() => setIsVisible(true)}
+            style={{borderRadius:8}}
           >
             添加设备
           </Button>
