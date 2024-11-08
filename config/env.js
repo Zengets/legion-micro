@@ -1,11 +1,11 @@
 //环境变量配置
 export default {
   development: {
-    'APPURL': '"/api"',
+    'APPURL': '"https://www.youtianchen.cn/api/"',
 
   },
   production: {
-    'APPURL': '"/api"',
+    'APPURL': '"https://www.youtianchen.cn/api/"',
 
   }
 }

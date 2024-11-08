@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { navigateTo, switchTab, onThemeChange, scanCode } from '@tarojs/taro';
+import { navigateTo, switchTab, login, scanCode } from '@tarojs/taro';
 import CProvider from '@/components/CProvider';
 import { View, Text, Image } from '@tarojs/components';
 import { IconFont } from '@nutui/icons-react-taro';
@@ -19,7 +19,28 @@ const options = [
 ]
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    login({
+      success: async (res) => {
+        console.log('====================================');
+        console.log(res?.code);
+        console.log('====================================');
+        if (res.code) {
+          //发起网络请求
+         let res = await doFetch({ url: "/mini/login", params: { code: res?.code }, method: "GET" });
+         console.log('====================================');
+         console.log(res);
+         console.log('====================================');
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+
+  }, []);
+
 
   const { data } = useRequest(async () => {
     let res = [
@@ -69,16 +90,11 @@ export default function Home() {
       }
     ]// await doFetch({url:"",params:{}})
     return res
-
   })
 
   const handleSelect = (item) => {
-    console.log('====================================');
-    console.log(item.name)
-    console.log('====================================');
     switch (item.name) {
       case '扫码绑定':
-      // 允许从相机和相册扫码
         scanCode({
           success: (res) => {
             console.log(res)
@@ -122,7 +138,7 @@ export default function Home() {
             shape="square"
             icon={<Plus width={16} height={16} />}
             onClick={() => setIsVisible(true)}
-            style={{borderRadius:8}}
+            style={{ borderRadius: 8 }}
           >
             添加设备
           </Button>
